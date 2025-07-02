@@ -2,7 +2,7 @@
 
 header {
     padding: 0.8px;
-    background-color: thistle;
+    background-color: rgb(242, 230, 242);
     color: steelblue;
     font-size: 1.6rem;
     font-weight: bold;
@@ -12,19 +12,17 @@ header {
 main > div {
     max-width: 1000px;
     margin: 0 auto;
-    display: block;
 }
 
 img {
     max-width: 100%;
     height: auto;
-    display: flex;
+    display: block;
 }
 
 main > div {
-    max-width: 100px;
-    margin: 0 auto;
     display: flex;
+    margin: 0 auto;
     justify-content: space-between;
     margin-top: 60px;
 }
@@ -50,5 +48,9 @@ footer {
         /* ↑本来垂直方向の中央寄せだが、ブラウザの画面幅が小さくなた際、
         コンテナごと９０°回転するため、かかる方向が横向きになり、
         同じく効果出る方向も傾くので横からだけでなく縦からも設定しておく必要がある */
+    }
+    main > div:nth-child(2){
+    /* ↑縦画面の際、画像と文章を交互に表示する */
+        flex-direction: column;
     }
 }
